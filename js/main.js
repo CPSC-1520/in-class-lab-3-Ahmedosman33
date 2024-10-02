@@ -10,20 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Step 2 & 3: Add/remove bold on hover
    resourcesDiv.addEventListener('mouseover', (event) => {
-    if (event.target.tagName === 'A') {
+    if (event.target.classList.contains('list-group-item')) {
         event.target.classList.add('fw-bold');
     }
 });
 
 resourcesDiv.addEventListener('mouseout', (event) => {
-    if (event.target.tagName === 'A') {
+    if (event.target.classList.contains('list-group-item')) {
         event.target.classList.remove('fw-bold');
     }
 });
 
 // Step 4: Italicize clicked item
 resourcesDiv.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A') {
+    if (event.target.classList.contains('list-group-item')) {
         event.target.classList.add('fst-italic');
     }
 });
